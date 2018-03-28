@@ -1,0 +1,91 @@
+
+======================= Log Before Release =====================================
+2018-03-25:
+  * Revise vignettes.
+
+2018-02-11:
+  * Revise vignettes and demo code.
+
+2017-08-06:
+  * Rename package to "MixfMRI".
+
+2016-11-10:
+  * Add gcv.smooth2d().
+
+2016-04-15:
+  * Add brick2p.
+
+2016-01-17:
+  * Add CBA method, cab.cor().
+
+2015-11-05:
+  * Add two FDR procecures.
+  * Add merging steps with two FDR procedures.
+
+2015-06-28:
+  * Remove some datasets and add a new dataset pstats.
+  * Adjust simulation workflows for 25 replicates.
+  * Add confidence ellipsoid methods.
+
+2015-04-19:
+  * Add simple, extend, qnorm.simple, qnorm.extend, prob.simple, and
+    prob.extend to initializations.
+  * Fix bugs of max.PV.
+
+2015-04-01:
+  * Almost everything was wrong before this day.
+  * data/2dphant.rda is added.
+  * data/Imagination_pvals.rda is added.
+  * data/CNTS* data/jss* data/shepp* are all removed.
+  * man/*.Rd related to those data above are changed.
+  * inst/workflow/* related to those data above are changed as well.
+
+2015-03-07:
+  * Implement lmt.I method.
+
+2015-01-07:
+  * Change CNTSL.* and CNTSR.* to smoothed version.
+
+2015-01-05:
+  * Add alternative methods to simu_2d and CNTS.
+
+2014-12-24:
+  * Add man pages.
+
+2014-11-28:
+  * Add CNTS.
+
+2014-09-27:
+  * Add lrt2.
+  * Add hypothesis testing for merging inactive clusters (work flow only).
+
+2014-07-12:
+  * Add JSS examples.
+
+2014-04-16:
+  * Add SPMD.
+
+2014-03-26:
+  * Fix a graden bug for beta log likelihood.
+
+2014-02-23:
+  * Add apecma.
+  * Add plotpv and plotclustpv, and add them to work flow.
+
+2014-02-22:
+  * Change initialization method and restrictions.
+  * Add lrt and fix AIC and BIC.
+  * Add 3d data (CNTS) and work flow.
+
+2014-02-15:
+  * Debugging start.
+  * Add 2d data (pval.olddata.*) and work flow.
+
+2014-02-13:
+  * Add toy data.
+
+2014-02-12:
+  * Add beta constrains optimization.
+
+2014-02-08:
+  * First initial.

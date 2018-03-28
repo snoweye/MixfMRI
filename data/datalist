@@ -1,0 +1,6 @@
+2dphant: shepp0fMRI shepp1fMRI shepp2fMRI sheppAnat
+control: .FC.CT
+envir: .MixfMRIEnv
+pstats
+pval: pval.2d.complex pval.2d.mag
+toy: toy1 toy2

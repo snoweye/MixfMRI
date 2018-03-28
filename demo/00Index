@@ -1,0 +1,22 @@
+gen_data		MixfMRI	Generate fake datasets.
+pval_2d_mag		MixfMRI	A 2D example.
+pval_2d_complex		MixfMRI	A 2D example.
+test_toy		MixfMRI	Analysis the toy datasets.
+test_noX		MixfMRI	An example of ignoring X inforamtion.
+fclust3d		MixfMRI	fMRI clustering on 3D data.
+fclust2d		MixfMRI	fMRI clustering on 2D data.
+mpi_test_toy		MixfMRI	Analysis the toy datasets in parallel.
+mpi_fclust3d		MixfMRI	fMRI clustering on 3D data in parallel.
+mpi_fclust2d		MixfMRI	fMRI clustering on 2D data in parallel.
+maitra_2d		MixfMRI	Dr. Maitra's 2d examples with 4 clusters.
+maitra_2d_fclust	MixfMRI Dr. Maitra's 2d fclust test.
+maitra_phantom		MixfMRI	Dr. Maitra's 2d phantoms.
+shepp			MixfMRI	More Dr. Maitra's 2d examples.
+alter_shepp1fMRI	MixfMRI	Alternative methods for shepp1fMRI.
+alter_shepp2fMRI	MixfMRI	Alternative methods for shepp2fMRI.
+alter_logor		MixfMRI	Alternative methods using logOR.
+lmt_I			MixfMRI	A likelihood mixture test example.
+logit_ETA_I		MixfMRI	An example for cov matrix of logit ETA.
+logit_post_I		MixfMRI	An example for cov matrix of posterior.
+logor_stat		MixfMRI	An example for tests of log odds ratio.
+cba_cor			MixfMRI	An example for cba.cor().

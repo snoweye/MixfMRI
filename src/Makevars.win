@@ -1,0 +1,6 @@
+OBJECTS = my_c_em.o my_c_apecm.o zzz.o
+
+all: $(SHLIB)
+
+$(SHLIB): $(OBJECTS)
+

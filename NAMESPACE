@@ -1,0 +1,60 @@
+useDynLib(MixfMRI)
+
+importFrom("stats", "rmultinom", "rbeta", "dbeta", "dnorm", "qnorm", "optim",
+                    "runif", "rnorm", "pnorm", "rbinom", "constrOptim",
+                    "pchisq", "rexp", "var", "cor", "median", "optimize")
+importFrom("grDevices", "colorRampPalette")
+importFrom("graphics", "axis", "image")
+importFrom("MASS", "ginv", "mvrnorm")
+importFrom("Matrix", "rankMatrix")
+importFrom("fftw", "IDCT", "DCT")
+importFrom("RColorBrewer", "brewer.pal")
+importFrom("MixSim", "overlap")
+importFrom("EMCluster", "pchisq.my", "RRand")
+
+# exportPattern("^[[:alpha:]]+")
+
+export(
+  "fclust",
+  "set.global",
+  "initial.em.gbd",
+  "initial.RndEM.gbd",
+  "em.step.gbd",
+  "apecma.step.gbd",
+  "lrt",
+  "lrt2",
+  "lrt.betamean",
+  "lrt.betaab",
+  "plotfclust",
+  "plotfclustpv",
+  "plotpv",
+  "plotpvlegend",
+  "gendataset",
+  "qvalue",
+  "dpval",
+  "dmixpval",
+  "my.YlOrRd",
+  "my.YlGnBu",
+  "my.Reds",
+  "my.alpha.append",
+  "summarized.overlap",
+  "lmt.I",
+  "lmt.pv",
+  "cov.logit.ETA",
+  "post.prob",
+  "cov.param",
+  "cov.post.z",
+  "cov.logit.z",
+  "logor.stat",
+  "cba.cor",
+  "cba.cor.2d",
+  "cba.cor.3d",
+  "gcv.smooth2d",
+  "fdr.bh.p1",
+  "fdr.bh.p2"
+)
+
+S3method(print, fclust)
+S3method(print, lmt.I)
+S3method(print, lmt.pv)
+

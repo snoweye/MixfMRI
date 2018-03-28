@@ -1,0 +1,13 @@
+citHeader("To cite MixfMRI in a publication use:")
+
+citEntry(
+  entry = "Misc",
+  title = "{MixfMRI}: {fMRI} Clustering Analysis",
+  author = personList(as.person("Wei-Chen Chen"),
+                      as.person("Ranjan Maitra")),
+  year = "2018",
+  note = "{R} Package, URL http://cran.r-project.org/package=MixfMRI",
+  textVersion = "Chen, W.-C. and Maitra, R. (2018) MixfMRI: fMRI Clustering Analysis. R Package, URL http://cran.r-project.org/package=MixfMRI",
+  key = "Chen2018MixfMRIpackage"
+)
+

@@ -1,0 +1,6 @@
+--- 'MixfMRI' Installation:
+0. Download 'MixfMRI':
+
+1. Default Installation:
+
+  > R CMD INSTALL MixfMRI_0.1-0.tar.gz

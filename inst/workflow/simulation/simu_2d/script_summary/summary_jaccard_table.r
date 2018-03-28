@@ -1,0 +1,84 @@
+library(MixfMRI, quietly = TRUE)
+prefix <- "simu"
+load("new/summary/summary.rda")
+
+### Plot
+ret.table <- NULL
+for(i.case in 1:nrow(ret.summary.org)){
+  tmp.phantom <- eval(parse(text = ret.summary.org[i.case, 1]))
+  tmp.overlap <- eval(parse(text = ret.summary.org[i.case, 2]))
+  set.seed(1234)
+  da <- gendataset(phantom = tmp.phantom, overlap = tmp.overlap)$pval
+
+  tmp.prefix <- ret.summary.org[i.case, 1:5]
+
+  file <- paste("./", prefix, "/",
+                paste(tmp.prefix, collapse = "_"),
+                "/output/ret.simu.2d.tp", sep = "")
+
+  file.rda <- paste(file, ".rda", sep = "")
+  if(file.exists(file.rda)){
+    load(file.rda)
+    ret.PARAM.org <- ret.PARAM
+  } else{
+    ret.PARAM.org <- NULL
+  }
+
+  file.rda <- paste(file, ".new3.rda", sep = "")
+  if(file.exists(file.rda)){
+    load(file.rda)
+    ret.PARAM.new <- ret.PARAM
+  } else{
+    ret.PARAM.new <- NULL
+  }
+
+  tmp <- ret.summary[i.case, c(1:8, 12:14)]
+  tmp.class <- tmp.phantom[!is.na(tmp.phantom)] + 1
+  tmp.class[tmp.class == 1] <- 0
+  tmp.class[tmp.class > 1] <- 1
+
+  ### K.AIC.maitra
+  i.k.org <- as.integer(ret.summary.org[i.case, 12])
+  if(is.na(i.k.org)){
+    tmp <- c(tmp, NA)
+  } else{
+    new.class <- ret.PARAM.new[[i.k.org]]$class
+    new.class[new.class == 1] <- 0
+    new.class[new.class > 1] <- 1
+    i.R <- Jaccard.Index(new.class, tmp.class)
+    tmp <- c(tmp, i.R)
+  }
+
+  ### K.BIC.maitra
+  i.k.org <- as.integer(ret.summary.org[i.case, 13])
+  if(is.na(i.k.org)){
+    tmp <- c(tmp, NA)
+  } else{
+    new.class <- ret.PARAM.new[[i.k.org]]$class
+    new.class[new.class == 1] <- 0
+    new.class[new.class > 1] <- 1
+    i.R <- Jaccard.Index(new.class, tmp.class)
+    tmp <- c(tmp, i.R)
+  }
+
+  ### K.ICL.BIC.maitra
+  i.k.org <- as.integer(ret.summary.org[i.case, 14])
+  if(is.na(i.k.org)){
+    tmp <- c(tmp, NA)
+  } else{
+    new.class <- ret.PARAM.new[[i.k.org]]$class
+    new.class[new.class == 1] <- 0
+    new.class[new.class > 1] <- 1
+    i.R <- Jaccard.Index(new.class, tmp.class)
+    tmp <- c(tmp, i.R)
+  }
+
+  ret.table <- rbind(ret.table, tmp)
+}
+
+colnames(ret.table)[12:14] <-
+   c("AIC.maitra.JI", "BIC.maitra.JI", "ICL.BIC.maitra.JI")
+rownames(ret.table) <- NULL
+print(ret.table)
+
+save(ret.table, file = "new/summary_table/summary_jaccard_table.rda")
