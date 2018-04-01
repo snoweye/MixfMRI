@@ -1,35 +1,32 @@
 \section[Demonstration]{Demonstration}
 \label{sec:demonstrations}
 \addcontentsline{toc}{section}{\thesection. Demonstrations}
-The examples presented below may not be real nor represent any meaningful
-brain activity. However, the purpose is to assess the performance
-of our proposed clustering methodology when any signal detected from
-voxels which can be active in vary ways.
+The examples presented below are simulated and are not necessarily
+meant to represent meaningful activation study on the brain. Their
+purpose is to demonstrate our segmentation methodology in activation
+detection. 
 
 
 \subsection[2D Phantoms]{2D Phantoms}
 \label{sec:phantoms}
 \addcontentsline{toc}{subsection}{\thesubsection. 2D Phantoms}
 
-Three 2D phantoms built in the \pkg{MixfMRI} can be plotted in \proglang{R}
+Three 2D phantoms built in the \pkg{MixfMRI} package can be displayed in
+\proglang{R} 
 from the demo as simple as
 \begin{Code}[title=Maitra's Phantoms]
 R> demo(maitra_phantom, package = "MixfMRI", ask = F)
 \end{Code}
 which performs the code in \code{MixfMRI/demo/maitra_phantom.r}.
 The \proglang{R}
-command should give a plot similar with Figure~\ref{fig:maitra_phantom}
-containing three 2D slices of a brain.
-Each phantom may have different amounts of
-activated voxels (in terms of small p-values).
-Colors represent different activations
-such as distributions of p-values that can be computed by hypothesis testing
-of prespecified statistical models associated with experiments designed
-to discover brain functions responding to prespecified stimula.
-The total proportions of active voxels are listed in the title of
+command should give a plot similar to Figure~\ref{fig:maitra_phantom}
+containing three different simulated 2D slices of a hypothesized brain.
+Each phantom may have different amounts of activated voxels (in terms
+of smaller $p$-values). Colors represent different activation intensities.
+The total proportions of truly active voxels are listed in the title of
 each phantom.
 \begin{figure}[h]
-\caption{Maitra's Phantoms.}
+\caption{Simulated 2D Phantoms.}
 \centering
 \vspace{0.2cm}
 \includegraphics[width=6in]{./MixfMRI-include/maitra_phantom}
@@ -37,19 +34,19 @@ each phantom.
 \end{figure}
 
 The examples used below mimic some active regions (in 2D)
-depending on different types of stimula that may trigger responses
+depending on different types of stimuli that may trigger responses
 in the brain.
 Hypothetically, the voxels may be active by regions, but
-each region may not be active in the same way (or magnitude) even they may need
-to collectively respone to the stimula (e.g. due to time delay,
-responding orders, or sensitivity of study deisgns).
+each region may not be active in the same way (or magnitude) even
+though they may need to collectively respond to the stimuli (for example, due
+to time delay, response order, or sensitivity of study design).
 
-For example, only 3.968\% of voxels in the \code{shepp2fMRI} phantom are active
-and indicate by two different colors (light blue and light brown)
-for different activation where p-values may be smaller than 0.05
+As an example, only 3.968\% of voxels in the \code{shepp2fMRI} phantom are active
+and indicated by two different colors (blue and brown)
+for different activation types where $p$-values may be smaller than 0.05
 and may follow two Beta distributions (with different configurations)
-for active voxles and one uniform distribution (i.e. $Beta(1, 1)$)
-for inactive voxels.
+for the truly active voxels and one uniform distribution (i.e. $Beta(1, 1)$)
+for the truly inactive voxels.
 
 The following code provides some counts for each groups of active and
 inactive voxels in the \code{shepp2fMRI} phantom.
@@ -62,10 +59,10 @@ shepp2fMRI
 The summary says that this phantom has three kinds of activations
 with group ids: 0, 1, and 2.
 There are 13,408 voxels belonging to cluster 0 (inactive),
-followed by 472 voxels belonging to cluster 1 (active \& high lighted in
-light blue in Figure~\ref{fig:maitra_phantom}), and
+followed by 472 voxels belonging to cluster 1 (active \& highlighted in
+blue in Figure~\ref{fig:maitra_phantom}), and
 82 voxels belonging to cluster 2 (active \& high lighted in
-light brown in Figure~\ref{fig:maitra_phantom}).
+ brown in Figure~\ref{fig:maitra_phantom}).
 There are 51,574 pixels (NA) of this
 imaging dataset which are not within the brain (contour by the black line
 in Figure~\ref{fig:maitra_phantom}).
@@ -89,8 +86,9 @@ as simple as
 \begin{Code}[title=Simulations of Active Voxels]
 R> demo(maitra_2d, package = "MixfMRI", ask = F)
 \end{Code}
-Note the overlap repesents similarity of activation signals. The higher
-the overlap, the more difficult to distinguish the clusters.
+Note that the overlap repesents similarity of activation signals. The higher
+the overlap, the more difficult it becomes to distinguish between
+activation and inactivation and also the kinds of activation. 
 
 The command above should give a plot similar to Figure~\ref{fig:maitra_2d}
 containing group id's on the left and their associated
@@ -104,34 +102,37 @@ the group id 2's are indicated by white (active is highly associated with
 stimula due to experiment design),
 1's are indicated by light gray (slightly active),
 and 0's are indicated by dark gray (inactive).
-Note the white color was light blue
-and the light gray was light brown in Figure~\ref{fig:maitra_phantom}
+Note that the region with white color was the region colored  blue
+and the light gray region corresponds to the region colored brown in
+Figure~\ref{fig:maitra_phantom} 
 \item
-The simulated p-values are colored by red-orange-yellow from 0 to 1.
-Note that small p-values (red) may also occur at inactive voxels.
+The simulated $p$-values are colored by a map using  a
+red-orange-yellow palette from 0 to 1.
+Note that small $p$-values (redder voxels) may also occur at truly inactive voxels.
 \end{itemize}
 See Figure~\ref{fig:maitra_2d_fclust} for the distribution of
 simulated p-values for the phantom \code{shepp2fMRI}.
 
 \begin{figure}[h]
-\caption{Voxels Activation Simulations}
+\caption{Activated regions of voxels and simulated $p$-values.}
 \centering
 \vspace{0.2cm}
 \includegraphics[width=4in]{./MixfMRI-include/maitra_2d}
 \label{fig:maitra_2d}
 \end{figure}
 
-The methodology and analyses developed in this package are aiming for
-identifying those active voxels in spatial clusters. For example,
-regions of active voxels associated with playing certain sports.
+The methodology and analyses implemented in this package aim to 
+identify those active voxels in spatial clusters. For example,
+regions of active voxels associated with imagining the playing of certain
+sports. 
 When an experiment was conducted/designed to detect brain behaviors,
-the statistical model and the p-values of the treatment effect
-should be able to reflact the voxel activations.
-Typically, the statistical tests are done independently voxel by voxel
+the statistical model and the $p$-values of the treatment effect
+should be able to reflect the voxel activations.
+Typically, the statistical tests are done independently voxel-by-voxel
 due to complexity of computation and modeling.
 This package provides post hoc clustering that adds spatial contents
-to p-vlaues and helps to isolate meaningful regions
-clouded with many small p-values.
+to p-values and helps to isolate meaningful regions
+clouded with many small $p$-values.
 See \cite{ChenMaitra2018} for information of clustering performance and
 comprehensive assessments for this post hoc approach.
 
@@ -144,7 +145,7 @@ The example can be found in
 \begin{Code}[title=Clustering of Active Voxels]
 R> demo(maitra_2d_fclust, package = "MixfMRI", ask = F)
 \end{Code}
-This demo (explained below) is to cluster the simulated p-values
+This demo (explained below) is to cluster the simulated $p$-values
 (see Section~\ref{sec:2d_simulations}) using the developed method.
 \begin{Code}[title=Code of \code{maitra\_2d\_fclust.r}]
 library(MixfMRI, quietly = TRUE)
@@ -168,7 +169,7 @@ print(ret)
 library(EMCluster, quietly = TRUE)
 RRand(ret$class, shepp2fMRI[id] + 1)
 \end{Code}
-In the code above, the histogram of simulated p-values is plotted in
+In the code above, the histogram of simulated $p$-values is plotted in
 Figure~\ref{fig:maitra_2d_fclust}.
 Then, the
 \code{fclust(X.gbd, PV.gbd, K = 3)} groups voxels in three clusters.
@@ -176,29 +177,32 @@ At the end, \code{ret} saves the clustering results.
 The \code{print(ret)} from the above code will show the results below
 in detail:
 \begin{itemize}
-\item \code{N} is the total number of voxels to be clustered.
-\item \code{K} is the total number of clusters.
-\item \code{n.class} is the number of voxels for each cluster.
-\item \code{ETA} is the mixing proportion of each cluster.
-\item \code{BETA} is the parameters of Beta distributions (by column).
-\item \code{MU} is the centers of clusters (location within the brain).
-\item \code{SIGMA} is the dispersion of clusters.
+\item \code{N} is the total number of voxels to be clustered/segmented
+\item \code{K} is the total number of segments.
+\item \code{n.class} is the number of voxels in each segment
+\item \code{ETA} is the mixing proportion of each segment
+\item \code{BETA} is the set of parameters of the Beta distributions
+  (by column) 
+\item \code{MU} is the centers of the segements (the spatial location
+  inside the brain) 
+\item \code{SIGMA} is the dispersion of the segments
 \end{itemize}
 
 \begin{figure}[h]
-\caption{Activation (p-values) Distribution. The x-axis is for the p-values.}
+\caption{Activation ($p$-values) Distribution. The x-axis is for the p-values.}
 \centering
 \vspace{0.2cm}
 \includegraphics[width=6in]{./MixfMRI-include/maitra_2d_fclust}
 \label{fig:maitra_2d_fclust}
 \end{figure}
 
-The numbers of voxels for each cluster are
+The numbers of voxels for each segment, in this example, are
 13,394, 184, and 384 associated with new cluster ids: 0, 1, and 2,
 respectivelly.
 Comparing with the true classifications (see the table in
 Section~\ref{sec:phantoms}), the adjusted Rand index gives
-$0.9749$ indicating good consistence between true active and clustered results.
+$0.9749$ indicating good agreement between the truly active and the
+activated (as determined by our segmentation methodology) results. 
 
 \begin{CodeOutput}[title=Outputs of Clustering]
 R> print(ret)
