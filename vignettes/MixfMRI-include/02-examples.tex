@@ -67,7 +67,7 @@ There are 51,574 pixels (NA) of this
 imaging dataset which are not within the brain (contour by the black line
 in Figure~\ref{fig:maitra_phantom}).
 See Section~\ref{sec:2d_simulations} for information of generating
-p-values from a mixture of three Beta distributions.
+$p$-values from a mixture of three Beta distributions.
 
 
 \subsection[2D Simulations]{2D Simulations}
@@ -75,10 +75,10 @@ p-values from a mixture of three Beta distributions.
 \addcontentsline{toc}{subsection}{\thesubsection. 2D Simulations}
 
 The \pkg{MixfMRI} provides a function \code{gendataset(phantom, overlap)}
-to generate p-values of activations.
+to generate $p$-values of activations.
 The function needs two arguments: \code{phantom} and \code{overlap}.
 The \code{phantom} is a map containing voxel group id's
-where p-values will be simulated from a mixture Beta distribution with
+where $p$-values will be simulated from a mixture Beta distribution with
 certain mixture level specified by the \code{overlap} argument.
 The example can be found in
 \code{MixfMRI/demo/maitra_2d.r} and can be done in \proglang{R}
@@ -86,13 +86,13 @@ as simple as
 \begin{Code}[title=Simulations of Active Voxels]
 R> demo(maitra_2d, package = "MixfMRI", ask = F)
 \end{Code}
-Note that the overlap repesents similarity of activation signals. The higher
+Note that the overlap represents similarity of activation signals. The higher
 the overlap, the more difficult it becomes to distinguish between
 activation and inactivation and also the kinds of activation. 
 
 The command above should give a plot similar to Figure~\ref{fig:maitra_2d}
 containing group id's on the left and their associated
-p-values for stimulus responses on the right.
+$p$-values for stimulus responses on the right.
 The top row displays examples for phantom \code{shepp1fMRI}, and the
 bottom row displays examples for phantom \code{shepp2fMRI}.
 \begin{itemize}
@@ -111,7 +111,7 @@ red-orange-yellow palette from 0 to 1.
 Note that small $p$-values (redder voxels) may also occur at truly inactive voxels.
 \end{itemize}
 See Figure~\ref{fig:maitra_2d_fclust} for the distribution of
-simulated p-values for the phantom \code{shepp2fMRI}.
+simulated $p$-values for the phantom \code{shepp2fMRI}.
 
 \begin{figure}[h]
 \caption{Activated regions of voxels and simulated $p$-values.}
@@ -131,7 +131,7 @@ should be able to reflect the voxel activations.
 Typically, the statistical tests are done independently voxel-by-voxel
 due to complexity of computation and modeling.
 This package provides post hoc clustering that adds spatial contents
-to p-values and helps to isolate meaningful regions
+to $p$-values and helps to isolate meaningful regions
 clouded with many small $p$-values.
 See \cite{ChenMaitra2018} for information of clustering performance and
 comprehensive assessments for this post hoc approach.
@@ -183,13 +183,13 @@ in detail:
 \item \code{ETA} is the mixing proportion of each segment
 \item \code{BETA} is the set of parameters of the Beta distributions
   (by column) 
-\item \code{MU} is the centers of the segements (the spatial location
+\item \code{MU} is the centers of the segments (the spatial location
   inside the brain) 
 \item \code{SIGMA} is the dispersion of the segments
 \end{itemize}
 
 \begin{figure}[h]
-\caption{Activation ($p$-values) Distribution. The x-axis is for the p-values.}
+\caption{Activation ($p$-values) Distribution. The x-axis is for the $p$-values.}
 \centering
 \vspace{0.2cm}
 \includegraphics[width=6in]{./MixfMRI-include/maitra_2d_fclust}
@@ -198,7 +198,7 @@ in detail:
 
 The numbers of voxels for each segment, in this example, are
 13,394, 184, and 384 associated with new cluster ids: 0, 1, and 2,
-respectivelly.
+respectively.
 Comparing with the true classifications (see the table in
 Section~\ref{sec:phantoms}), the adjusted Rand index gives
 $0.9749$ indicating good agreement between the truly active and the
