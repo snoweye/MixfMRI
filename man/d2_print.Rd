@@ -27,7 +27,7 @@
   \code{\link{set.global}()}, \code{\link{fclust}()}.
 }
 \examples{
-\dontrun{
+%\dontrun{
 library(MixfMRI, quietly = TRUE)
 set.seed(1234)
 
@@ -35,14 +35,14 @@ set.seed(1234)
 da <- pval.2d.complex
 id <- !is.na(da)
 PV.gbd <- da[id]
-hist(PV.gbd, nclass = 100, main = "p-value")
+# hist(PV.gbd, nclass = 100, main = "p-value")
 
 ### Test 2d data.
 id.loc <- which(id, arr.ind = TRUE)
 X.gbd <- t(t(id.loc) / dim(da))
-ret <- fclust(X.gbd, PV.gbd, K = 3)
+ret <- fclust(X.gbd, PV.gbd, K = 2)
 print(ret)
-}
+%}
 }
 \keyword{programming}
 

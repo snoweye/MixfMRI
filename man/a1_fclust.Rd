@@ -122,7 +122,6 @@
   \code{\link{print.fclust}()}.
 }
 \examples{
-\dontrun{
 library(MixfMRI, quietly = TRUE)
 library(EMCluster, quietly = TRUE)
 # .FC.CT$algorithm <- "em"
@@ -134,11 +133,12 @@ set.seed(1234)
 ### Test toy1.
 X.gbd <- toy1$X.gbd[, -3]
 PV.gbd <- toy1$PV.gbd
-PARAM <- fclust(X.gbd, PV.gbd, K = 3)
+PARAM <- fclust(X.gbd, PV.gbd, K = 2)
 print(PARAM)
 id.toy1 <- .MixfMRIEnv$CLASS.gbd
 print(RRand(toy1$CLASS.gbd, id.toy1))
 
+\dontrun{
 ### Test toy2.
 X.gbd <- toy2$X.gbd[, -3]
 PV.gbd <- toy2$PV.gbd

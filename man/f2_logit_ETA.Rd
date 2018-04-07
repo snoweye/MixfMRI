@@ -36,7 +36,7 @@
   \code{EMCluster::lmt()}, \code{lmt.I()}.
 }
 \examples{
-\dontrun{
+%\dontrun{
 library(MixfMRI, quietly = TRUE)
 .FC.CT$model.X <- "I"
 .FC.CT$CONTROL$debug <- 0
@@ -59,8 +59,8 @@ cov.logit.ETA <- cov.logit.ETA(x, fcobj, cov.param = cov.param$cov)
 ### Compute cov matrxi of eta_k - eta_1 for all k > 1.
 A <- cbind(rep(-1, K - 1), diag(1, K - 1))
 ETA <- fcobj$param$ETA
-log.or <- log(ETA / (1 - ETA)) %*% t(A)
-cov.log.or <- A %*% cov.logit.ETA %*% t(A)
-}
+log.or <- log(ETA / (1 - ETA)) \%*\% t(A)
+cov.log.or <- A \%*\% cov.logit.ETA \%*\% t(A)
+%}
 }
 \keyword{programming}

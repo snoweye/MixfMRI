@@ -47,7 +47,7 @@
   \code{cov.logit.z()}.
 }
 \examples{
-\dontrun{
+%\dontrun{
 library(MixfMRI, quietly = TRUE)
 .FC.CT$model.X <- "I"
 .FC.CT$CONTROL$debug <- 0
@@ -66,7 +66,7 @@ x <- list(X.gbd = X.gbd, PV.gbd = PV.gbd)
 post.z <- post.prob(x, fcobj)
 lor <- logor.stat(x, fcobj, post.z)
 
-### Check if 95% CE covers log odd ratio = 1.
+### Check if 95\% CE covers log odd ratio = 1.
 id <- !is.na(lor$df)
 id.cover.0 <- which(lor$test.stat[id] < pchisq(0.95, lor$df[id]))
 
@@ -77,6 +77,6 @@ id.merge <- id.active[id][id.cover.0]
 ### Check results.
 post.z[id.merge,]
 cbind(toy1$X.gbd[id.merge,], toy1$PV.gbd[id.merge])
-}
+%}
 }
 \keyword{programming}

@@ -57,7 +57,6 @@
   \code{\link{fdr.bh.p1}()}, \code{\link{fdr.bh.p2}()}.
 }
 \examples{
-\dontrun{
 ### Simulated data
 library(MixfMRI, quietly = TRUE)
 dim <- c(4, 5, 4, 10)
@@ -80,6 +79,7 @@ fun.logit <- function(a, B){
 id.class.logit <- cba.cor(da.ts, fun.sim = fun.logit)
 table(id.class.logit)
 
+\dontrun{
 ### Real data
 library(AnalyzeFMRI, quietly = TRUE)
 library(oro.nifti, quietly = TRUE)

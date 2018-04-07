@@ -32,7 +32,7 @@
   \code{\link{set.global}()}.
 }
 \examples{
-%\dontrun{
+\dontrun{
 library(MixfMRI, quietly = TRUE)
 set.seed(1234)
 da <- gendataset(phantom = shepp1fMRI, overlap = 0.01)$pval
@@ -43,7 +43,7 @@ image(shepp1fMRI[50:210, 50:210], axes = FALSE)
 image(shepp2fMRI[50:210, 50:210], axes = FALSE)
 image(da[50:210, 50:210], axes = FALSE)
 image(da2[50:210, 50:210], axes = FALSE)
-%}
+}
 }
 \keyword{programming}
 

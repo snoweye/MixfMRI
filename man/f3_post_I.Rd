@@ -111,10 +111,10 @@ cov.logit.z <- cov.logit.z(x, fcobj, post.z = post.z,
 
 ### Compute cov matrix of log odds ratio for all k > 1.
 logit.p <- log(post.z[fcobj$class != 1,] / (1 - post.z[fcobj$class != 1,]))
-log.or <- logit.p %*% t(A)
-cov.log.or <- lapply(cov.logit.z, function(x) A %*% x %*% t(A))
+log.or <- logit.p \%*\% t(A)
+cov.log.or <- lapply(cov.logit.z, function(x) A \%*\% x \%*\% t(A))
 
-### Check if 0 vector covered by 95% confidence ellipsoid.
+### Check if 0 vector covered by 95\% confidence ellipsoid.
 id <- 1
 plot(log.or[id,],
      xlim = log.or[id, 1] + c(-5, 5),

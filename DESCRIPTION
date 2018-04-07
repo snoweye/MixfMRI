@@ -1,6 +1,6 @@
 Package: MixfMRI
 Version: 0.1-0
-Date: 2018-03-25
+Date: 2018-04-06
 Title: Mixture fMRI Clustering Analysis
 Authors@R: c(person("Wei-Chen", "Chen", role = c("aut", "cre"), email =
         "wccsnow@gmail.com"),
@@ -12,12 +12,16 @@ Enhances: pbdMPI (>= 0.3-4), AnalyzeFMRI, oro.nifti
 LazyLoad: yes
 LazyData: yes
 Description: Utilizing model-based clustering (unsupervised)
-        for fMRI data especially in a distributed manner. The methods
-        includes 2D and 3D clustering analyses and segmentation analyses for
-        fMRI signals where p-values are significant levels of active voxels
-        which respond to stimulate of interesting. The analyses are
-        mainly identifying active voxels/signals from normal brain behaviors.
-        Workflows are also implemented utilizing high performance techniques.
+        for functional magnetic resonance imaging (fMRI) data.
+        The developed methods (Chen and Maitra (2018, manuscript)) include
+        2D and 3D clustering analyses (for p-values with voxel locations) and
+        segmentation analyses (for p-values alone) for fMRI data where p-values
+        indicate significant level of activation responding to stimulate
+        of interesting. The analyses are mainly identifying active
+        voxel/signal associated with normal brain behaviors.
+        Analysis pipelines (R scripts) utilizing this package
+        (see examples in 'inst/workflow/') is also implemented with high
+        performance techniques.
 License: Mozilla Public License 2.0
 BugReports: https://github.com/snoweye/MixfMRI/issues
 URL: https://github.com/snoweye/MixfMRI

@@ -36,7 +36,6 @@
   \code{\link{PARAM.org}}.
 }
 \examples{
-\dontrun{
 library(MixfMRI, quietly = TRUE)
 library(EMCluster, quietly = TRUE)
 # .FC.CT$algorithm <- "em"
@@ -48,13 +47,14 @@ library(EMCluster, quietly = TRUE)
 set.seed(1234)
 X.gbd <- toy1$X.gbd
 PV.gbd <- toy1$PV.gbd
-PARAM <- set.global(X.gbd, PV.gbd, K = 3)
+PARAM <- set.global(X.gbd, PV.gbd, K = 2)
 PARAM.new <- initial.em.gbd(PARAM)
 PARAM.toy1 <- em.step.gbd(PARAM.new)
 id.toy1 <- .MixfMRIEnv$CLASS.gbd
 print(PARAM.toy1$ETA)
 RRand(toy1$CLASS.gbd, id.toy1)
 
+\dontrun{
 ### Test toy2.
 set.seed(1234)
 X.gbd <- toy2$X.gbd
