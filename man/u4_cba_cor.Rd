@@ -79,23 +79,24 @@ fun.logit <- function(a, B){
 id.class.logit <- cba.cor(da.ts, fun.sim = fun.logit)
 table(id.class.logit)
 
-\dontrun{
-### Real data
-library(AnalyzeFMRI, quietly = TRUE)
-library(oro.nifti, quietly = TRUE)
+dontrun <- function(){
+  ### Real data
+  library(AnalyzeFMRI, quietly = TRUE)
+  library(oro.nifti, quietly = TRUE)
 
-fn <- "pb02_volreg_tlrc.nii"
-da <- readNIfTI(fn)
-da.ts <- da@.Data
+  fn <- "pb02_volreg_tlrc.nii"
+  da <- readNIfTI(fn)
+  da.ts <- da@.Data
 
-fn <- "mask_anat.nii"
-da <- readNIfTI(fn)
-da.m <- da@.Data
+  fn <- "mask_anat.nii"
+  da <- readNIfTI(fn)
+  da.m <- da@.Data
 
-id.class <- cba.cor(da.ts, da.m)
-dim(id.class) <- dim(da.m)
-length(table(id.class))
+  id.class <- cba.cor(da.ts, da.m)
+  dim(id.class) <- dim(da.m)
+  length(table(id.class))
 }
+# dontrun()
 }
 \keyword{programming}
 

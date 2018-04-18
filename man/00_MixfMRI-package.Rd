@@ -36,11 +36,12 @@
   \code{\link{fclust}()}, \code{\link{set.global}()}.
 }
 \examples{
-\dontrun{
 library(MixfMRI, quietly = TRUE)
-demo(fclust3d,'MixfMRI',ask=FALSE,echo=FALSE)
-demo(fclust2d,'MixfMRI',ask=FALSE,echo=FALSE)
+dontrun <- function(){
+  demo(fclust3d,'MixfMRI',ask=FALSE,echo=FALSE)
+  demo(fclust2d,'MixfMRI',ask=FALSE,echo=FALSE)
 }
+# dontrun()
 }
 \keyword{package}
 

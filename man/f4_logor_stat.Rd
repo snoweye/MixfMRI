@@ -47,7 +47,6 @@
   \code{cov.logit.z()}.
 }
 \examples{
-%\dontrun{
 library(MixfMRI, quietly = TRUE)
 .FC.CT$model.X <- "I"
 .FC.CT$CONTROL$debug <- 0
@@ -77,6 +76,5 @@ id.merge <- id.active[id][id.cover.0]
 ### Check results.
 post.z[id.merge,]
 cbind(toy1$X.gbd[id.merge,], toy1$PV.gbd[id.merge])
-%}
 }
 \keyword{programming}

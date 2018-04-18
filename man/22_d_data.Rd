@@ -34,11 +34,9 @@
   Wei-Chen Chen and Ranjan Maitra.
 }
 \examples{
-\dontrun{
 library(MixfMRI, quietly = TRUE)
 
 ### Plotting.
 demo(shepp,'MixfMRI',ask=FALSE,echo=FALSE)
-}
 }
 \keyword{datasets}

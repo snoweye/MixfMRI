@@ -27,7 +27,6 @@
   \code{\link{set.global}()}, \code{\link{fclust}()}.
 }
 \examples{
-%\dontrun{
 library(MixfMRI, quietly = TRUE)
 set.seed(1234)
 
@@ -42,7 +41,6 @@ id.loc <- which(id, arr.ind = TRUE)
 X.gbd <- t(t(id.loc) / dim(da))
 ret <- fclust(X.gbd, PV.gbd, K = 2)
 print(ret)
-%}
 }
 \keyword{programming}
 

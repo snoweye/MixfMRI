@@ -138,15 +138,16 @@ print(PARAM)
 id.toy1 <- .MixfMRIEnv$CLASS.gbd
 print(RRand(toy1$CLASS.gbd, id.toy1))
 
-\dontrun{
-### Test toy2.
-X.gbd <- toy2$X.gbd[, -3]
-PV.gbd <- toy2$PV.gbd
-PARAM <- fclust(X.gbd, PV.gbd, K = 3)
-print(PARAM)
-id.toy2 <- .MixfMRIEnv$CLASS.gbd
-print(RRand(toy2$CLASS.gbd, id.toy2))
+dontrun <- function(){
+  ### Test toy2.
+  X.gbd <- toy2$X.gbd[, -3]
+  PV.gbd <- toy2$PV.gbd
+  PARAM <- fclust(X.gbd, PV.gbd, K = 3)
+  print(PARAM)
+  id.toy2 <- .MixfMRIEnv$CLASS.gbd
+  print(RRand(toy2$CLASS.gbd, id.toy2))
 }
+# dontrun()
 }
 \keyword{programming}
 

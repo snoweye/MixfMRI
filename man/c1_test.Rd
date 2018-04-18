@@ -75,10 +75,11 @@ ret <- fclust(X.gbd, PV.gbd, K = 2, min.1st.prop = 0.95)
 ### p-values of rest clusters.
 ret.lrt <- lrt(PV.gbd, ret$class, K = 2)
 print(ret.lrt)
-\dontrun{
-ret.lrt2 <- lrt2(PV.gbd, ret$class, K = 3)
-print(ret.lrt2)
+dontrun <- function(){
+  ret.lrt2 <- lrt2(PV.gbd, ret$class, K = 3)
+  print(ret.lrt2)
 }
+# dontrun()
 }
 \keyword{programming}
 
