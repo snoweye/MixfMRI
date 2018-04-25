@@ -138,7 +138,7 @@ print(PARAM)
 id.toy1 <- .MixfMRIEnv$CLASS.gbd
 print(RRand(toy1$CLASS.gbd, id.toy1))
 
-dontrun <- function(){
+\donttest{
   ### Test toy2.
   X.gbd <- toy2$X.gbd[, -3]
   PV.gbd <- toy2$PV.gbd

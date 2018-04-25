@@ -37,7 +37,7 @@
 }
 \examples{
 library(MixfMRI, quietly = TRUE)
-dontrun <- function(){
+\donttest{
   demo(fclust3d,'MixfMRI',ask=FALSE,echo=FALSE)
   demo(fclust2d,'MixfMRI',ask=FALSE,echo=FALSE)
 }

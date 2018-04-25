@@ -90,7 +90,7 @@ library(EMCluster, quietly = TRUE)
 .FC.CT$CONTROL$debug <- 0
 K <- 3
   
-dontrun <- function(){
+\donttest{
   ### Fit toy1.
   set.seed(1234)
   X.gbd <- toy1$X.gbd

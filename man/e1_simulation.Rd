@@ -32,7 +32,7 @@
   \code{\link{set.global}()}.
 }
 \examples{
-dontrun <- function(){
+\donttest{
   library(MixfMRI, quietly = TRUE)
   set.seed(1234)
   da <- gendataset(phantom = shepp1fMRI, overlap = 0.01)$pval

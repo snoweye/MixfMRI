@@ -54,7 +54,7 @@ id.toy1 <- .MixfMRIEnv$CLASS.gbd
 print(PARAM.toy1$ETA)
 RRand(toy1$CLASS.gbd, id.toy1)
 
-dontrun <- function(){
+\donttest{
   ### Test toy2.
   set.seed(1234)
   X.gbd <- toy2$X.gbd

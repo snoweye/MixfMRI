@@ -51,7 +51,7 @@
 library(MixfMRI, quietly = TRUE)
 set.seed(1234)
   
-dontrun <- function(){
+\donttest{
   ### Check 2d data.
   da <- pval.2d.complex
   id <- !is.na(da)
