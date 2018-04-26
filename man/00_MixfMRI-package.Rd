@@ -41,7 +41,6 @@ library(MixfMRI, quietly = TRUE)
   demo(fclust3d,'MixfMRI',ask=FALSE,echo=FALSE)
   demo(fclust2d,'MixfMRI',ask=FALSE,echo=FALSE)
 }
-# dontrun()
 }
 \keyword{package}
 

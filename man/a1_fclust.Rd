@@ -147,7 +147,6 @@ print(RRand(toy1$CLASS.gbd, id.toy1))
   id.toy2 <- .MixfMRIEnv$CLASS.gbd
   print(RRand(toy2$CLASS.gbd, id.toy2))
 }
-# dontrun()
 }
 \keyword{programming}
 

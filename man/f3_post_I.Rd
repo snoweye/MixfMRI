@@ -124,6 +124,5 @@ K <- 3
   plotBN(log.or[id,], cov.log.or[[id]])
   points(0, 0, col = 2)
 }
-# dontrun()
 }
 \keyword{programming}

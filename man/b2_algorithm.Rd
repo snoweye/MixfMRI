@@ -66,7 +66,6 @@ RRand(toy1$CLASS.gbd, id.toy1)
   print(PARAM.toy2$ETA)
   RRand(toy2$CLASS.gbd, id.toy2)
 }
-# dontrun()
 }
 \keyword{programming}
 

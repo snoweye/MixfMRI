@@ -80,6 +80,5 @@ set.seed(1234)
   plotpvlegend(zlim = c(0.005, 0.008), main = "Mean of Beta Distribution")
   plotpvlegend(zlim = c(0, 0.01), main = "p-value")
 }
-# dontrun()
 }
 \keyword{programming}

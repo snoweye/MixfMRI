@@ -96,7 +96,6 @@ table(id.class.logit)
   dim(id.class) <- dim(da.m)
   length(table(id.class))
 }
-# dontrun()
 }
 \keyword{programming}
 

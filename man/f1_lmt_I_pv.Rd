@@ -89,6 +89,5 @@ library(EMCluster, quietly = TRUE)
   (lmt.pv.35 <- lmt.pv(ret.3, ret.5, X.gbd, PV.gbd))
   (lmt.pv.45 <- lmt.pv(ret.4, ret.5, X.gbd, PV.gbd))
 }
-# dontrun()
 }
 \keyword{programming}

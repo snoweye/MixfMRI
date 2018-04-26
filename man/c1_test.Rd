@@ -79,7 +79,6 @@ print(ret.lrt)
   ret.lrt2 <- lrt2(PV.gbd, ret$class, K = 3)
   print(ret.lrt2)
 }
-# dontrun()
 }
 \keyword{programming}
 

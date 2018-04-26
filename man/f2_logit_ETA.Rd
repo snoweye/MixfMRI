@@ -62,6 +62,5 @@ K <- 3
   log.or <- log(ETA / (1 - ETA)) \%*\% t(A)
   cov.log.or <- A \%*\% cov.logit.ETA \%*\% t(A)
 }
-# dontrun()
 }
 \keyword{programming}

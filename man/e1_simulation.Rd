@@ -44,7 +44,6 @@
   image(da[50:210, 50:210], axes = FALSE)
   image(da2[50:210, 50:210], axes = FALSE)
 }
-# dontrun()
 }
 \keyword{programming}
 
