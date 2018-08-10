@@ -9,11 +9,21 @@ fbarmax <- function(mu, barom, maxom,
   ((barom  - ommap$BarOmega) / barom)^2 + ((maxom - ommap$MaxOmega) / maxom)^2
 } # End of fbarmax().
 
-gendataset <- function(phantom, overlap){
+gendataset <- function(phantom, overlap, smooth = FALSE){
   eta <- table(phantom) / sum(table(phantom))
   mu <- c(0, optim(runif(2) + 3, fn = fbarmax,
                    barom = overlap, maxom = overlap, eta = eta)$par)
   tval <- matrix(rnorm(256^2), ncol = 256) + mu[phantom+1]
+
+  if(smooth == TRUE){
+    ystat <- tval
+    ystat[is.na(ystat)] <- 0
+    ## smooth by Garcia method
+    ystat <-  gcv.smooth2d(ystat, interval = c(0,10))$im.smooth
+    ystat[is.na(tval)] <- NA
+    tval <- ystat
+  }
+
   pval <- pnorm(tval, lower.tail = F)
   ret <- list(eta = eta, overlap = overlap,
               mu = mu, class.id = phantom + 1, tval = tval, pval = pval)
