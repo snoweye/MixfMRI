@@ -5,11 +5,12 @@
   Generate datasets for MixfMRI simulations
 }
 \usage{
-  gendataset(phantom, overlap)
+  gendataset(phantom, overlap, smooth = FALSE)
 }
 \arguments{
   \item{phantom}{a phantom dataset.}
   \item{overlap}{a desired overlap level.}
+  \item{smooth}{if \code{gcv.smooth2d()} be applied to the data.}
 }
 \details{
   This is a function to generate simulated fMRI data based on the input
