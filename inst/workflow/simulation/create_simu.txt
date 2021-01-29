@@ -2,23 +2,30 @@ tar zxvf MixfMRI_0.1-0.tar.gz
 cp -R ./MixfMRI/inst/workflow/simulation/simu_2d/ ./
 
 ### Edit "script/00-set_condition.r" if needed.
-### Do either one of the next.
+### Do either one of the next options
+###   - 1 simulation no smooth
+###   - 1 simulation w/ smooth
+###   - 25 simulations no smooth
+###   - 25 simulations w/ smooth
 
 ### Create one simulation
-cd simu_2d/
-Rscript create_simu.r
-Rscript create_smooth_simu.r
+# cd simu_2d/
+# Rscript create_simu.r                # no smooth
+# Rscript create_smooth_simu.r         # w/ smooth
 
 ### Create 25 simulations
-Rscript ./simu_2d/create_rep.r        
-Rscript ./simu_2d/create_smooth_rep.r
+### This will generate 25 folders with simulation scripts
+Rscript ./simu_2d/create_rep.r         # no smooth
+# Rscript ./simu_2d/create_smooth_rep.r  # w/ smooth
 
 ### Commands to run in background
+### This will run through those 25 folders and their simulation scripts.
 nohup bash q_run_1.sh &
 nohup bash q_run_2.sh &
 nohup bash q_run_3.sh &
 
 ### Collect all tables
+### This will summarize those 25 folders and their simulation results.
 Rscript ./run_summary_collect.r
 Rscript ./run_summary_collect_new4.r
 Rscript ./run_summary_collect_new5.r
