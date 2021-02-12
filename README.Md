@@ -3,8 +3,7 @@
 * **License:** [![License](http://img.shields.io/badge/license-MPL%202-orange.svg?style=flat)](https://www.mozilla.org/MPL/2.0/)
 * **Download:** [![Download](http://cranlogs.r-pkg.org/badges/MixfMRI)](https://cran.r-project.org/package=MixfMRI)
 * **Status:** [![Build Status](https://travis-ci.org/snoweye/MixfMRI.png)](https://travis-ci.org/snoweye/MixfMRI) [![Appveyor Build status](https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true)](https://ci.appveyor.com/project/snoweye/MixfMRI)
-* **Author:** Wei-Chen Chen and Ranjan Maitra
-
+* **Authors:** Wei-Chen Chen and Ranjan Maitra
 
 MixfMRI is an R package clustering fMRI data using parallel model-based
 clustering. The package mainly implements methods proposed in
