@@ -8,7 +8,7 @@
 
 MixfMRI is an R package clustering fMRI data using parallel model-based
 clustering. The package mainly implements methods proposed in
-Chen and Maitra (2021), arXiv:2102.03639 [pdf](https://arxiv.org/pdf/2102.03639).
+Chen and Maitra (2021), arXiv:2102.03639. ([pdf](https://arxiv.org/pdf/2102.03639))
 
 ## Installation
 
