@@ -16,17 +16,17 @@ For installing MixfMRI:
 
 ## Usage
 
-For simulation studies (w/ MPI):
+For simulation studies (with MPI and pbdMPI):
 * See "./inst/workflow/simulation/create_simu.txt" for simulations
   that support the methods developed and evaluated
   in Chen and Maitra (2021), arXiv:2102.03639.
 
-For testing run time (w/ MPI):
+For testing run time (with MPI and pbdMPI):
 * See "./inst/workflow/timing/" for testing a main function.
 
 ## Workflow
 
-For large scale workflows and examples (w/ MPI):
+For large scale workflows and examples (with MPI and pbdMPI):
 * "./inst/workflow/spmd/*_common/" for workflow main scripts.
 * "./inst/workflow/spmd/2d_V/" for running a 2D_V exmaple.
 * "./inst/workflow/spmd/2d_I/" for running a 2D_I exmaple.
