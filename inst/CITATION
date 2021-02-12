@@ -6,8 +6,18 @@ citEntry(
   author = personList(as.person("Wei-Chen Chen"),
                       as.person("Ranjan Maitra")),
   year = "2018",
-  note = "{R} Package, URL http://cran.r-project.org/package=MixfMRI",
-  textVersion = "Chen, W.-C. and Maitra, R. (2018) MixfMRI: fMRI Clustering Analysis. R Package, URL http://cran.r-project.org/package=MixfMRI",
+  note = "{R} Package, URL https://cran.r-project.org/package=MixfMRI",
+  textVersion = "Chen, W.-C. and Maitra, R. (2018) MixfMRI: fMRI Clustering Analysis. R Package, URL https://cran.r-project.org/package=MixfMRI",
   key = "Chen2018MixfMRIpackage"
 )
 
+citEntry(
+  entry = "Manual",
+  title = "A Quick Guide to the {MixfMRI} Package",
+  author = personList(as.person("Wei-Chen Chen"),
+                      as.person("Ranjan Maitra")),
+  year = "2018",
+  note = "{R} Vignette",
+  textVersion = "Chen, W.-C. and Maitra, R. (2018) A Quick Guide to the MixfMRI Package. R Vignette, URL https://cran.r-project.org/package=MixfMRI",
+  key = "Chen2018MixfMRIvignette"
+)

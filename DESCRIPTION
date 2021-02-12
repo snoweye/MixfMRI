@@ -1,6 +1,6 @@
 Package: MixfMRI
-Version: 0.1-1
-Date: 2018-08-10
+Version: 0.1-2
+Date: 2021-02-11
 Title: Mixture fMRI Clustering Analysis
 Authors@R: c(person("Wei-Chen", "Chen", role = c("aut", "cre"), email =
         "wccsnow@gmail.com"),
@@ -13,8 +13,9 @@ LazyLoad: yes
 LazyData: yes
 Description: Utilizing model-based clustering (unsupervised)
         for functional magnetic resonance imaging (fMRI) data.
-        The developed methods (Chen and Maitra (2018, manuscript)) include
-        2D and 3D clustering analyses (for p-values with voxel locations) and
+        The developed methods (Chen and Maitra (2021) <arXiv:2102.03639>)
+        include 2D and 3D clustering analyses
+        (for p-values with voxel locations) and
         segmentation analyses (for p-values alone) for fMRI data where p-values
         indicate significant level of activation responding to stimulate
         of interesting. The analyses are mainly identifying active
