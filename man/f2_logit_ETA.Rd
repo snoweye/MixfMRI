@@ -46,6 +46,8 @@ library(MixfMRI, quietly = TRUE)
 K <- 3
   
 \donttest{
+.rem <- function(){
+
   ### Fit toy1.
   set.seed(1234)
   X.gbd <- toy1$X.gbd
@@ -65,6 +67,8 @@ K <- 3
   ETA <- fcobj$param$ETA
   log.or <- log(ETA / (1 - ETA)) \%*\% t(A)
   cov.log.or <- A \%*\% cov.logit.ETA \%*\% t(A)
+
+}
 }
 }
 \keyword{programming}

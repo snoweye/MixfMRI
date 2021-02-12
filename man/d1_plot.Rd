@@ -56,6 +56,8 @@ library(MixfMRI, quietly = TRUE)
 set.seed(1234)
   
 \donttest{
+.rem <- function(){
+
   ### Check 2d data.
   da <- pval.2d.complex
   id <- !is.na(da)
@@ -83,6 +85,8 @@ set.seed(1234)
   par(mar = c(5.1, 4.1, 4.1, 2.1))
   plotpvlegend(zlim = c(0.005, 0.008), main = "Mean of Beta Distribution")
   plotpvlegend(zlim = c(0, 0.01), main = "p-value")
+
+}
 }
 }
 \keyword{programming}

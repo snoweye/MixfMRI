@@ -80,8 +80,12 @@ ret <- fclust(X.gbd, PV.gbd, K = 2, min.1st.prop = 0.95)
 ret.lrt <- lrt(PV.gbd, ret$class, K = 2)
 print(ret.lrt)
 \donttest{
+.rem <- function(){
+
   ret.lrt2 <- lrt2(PV.gbd, ret$class, K = 3)
   print(ret.lrt2)
+
+}
 }
 }
 \keyword{programming}

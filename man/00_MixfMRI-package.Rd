@@ -42,8 +42,12 @@
 \examples{
 library(MixfMRI, quietly = TRUE)
 \donttest{
+.rem <- function(){
+
   demo(fclust3d,'MixfMRI',ask=FALSE,echo=FALSE)
   demo(fclust2d,'MixfMRI',ask=FALSE,echo=FALSE)
+
+}
 }
 }
 \keyword{package}

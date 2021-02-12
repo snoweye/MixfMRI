@@ -38,6 +38,8 @@
 }
 \examples{
 \donttest{
+.rem <- function(){
+
   library(MixfMRI, quietly = TRUE)
   set.seed(1234)
   da <- gendataset(phantom = shepp1fMRI, overlap = 0.01)$pval
@@ -48,6 +50,8 @@
   image(shepp2fMRI[50:210, 50:210], axes = FALSE)
   image(da[50:210, 50:210], axes = FALSE)
   image(da2[50:210, 50:210], axes = FALSE)
+
+}
 }
 }
 \keyword{programming}

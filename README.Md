@@ -13,26 +13,26 @@ Chen and Maitra (2021), arXiv:2102.03639 [pdf](https://arxiv.org/pdf/2102.03639)
 ## Installation
 
 For installing MixfMRI:
-* see "./INSTALL" for details.
+* See "./INSTALL" for details.
 
 ## Usage
 
-For simulation studies:
-* see "./inst/workflow/simulation/create_simu.txt" for simulations
+For simulation studies (w/ MPI):
+* See "./inst/workflow/simulation/create_simu.txt" for simulations
   that support the methods developed and evaluated
   in Chen and Maitra (2021), arXiv:2102.03639.
 
-For testing run time:
-* see "./inst/workflow/timing/" for testing a main function.
+For testing run time (w/ MPI):
+* See "./inst/workflow/timing/" for testing a main function.
 
 ## Workflow
 
-For large scale workflows and examples:
-* see "./inst/workflow/spmd/*_common/" for workflow main scripts.
-* see "./inst/workflow/spmd/2d_V/" for running a 2D_V exmaple.
-* see "./inst/workflow/spmd/2d_I/" for running a 2D_I exmaple.
-* see "./inst/workflow/spmd/2d_noX/" for running a 2D_noX exmaple.
-* see "./inst/workflow/spmd/3d_V/" for running a 3D_V exmaple.
-* see "./inst/workflow/spmd/3d_I/" for running a 3D_I exmaple.
-* see "./inst/workflow/spmd/3d_noX/" for running a 3D_noX exmaple.
+For large scale workflows and examples (w/ MPI):
+* "./inst/workflow/spmd/*_common/" for workflow main scripts.
+* "./inst/workflow/spmd/2d_V/" for running a 2D_V exmaple.
+* "./inst/workflow/spmd/2d_I/" for running a 2D_I exmaple.
+* "./inst/workflow/spmd/2d_noX/" for running a 2D_noX exmaple.
+* "./inst/workflow/spmd/3d_V/" for running a 3D_V exmaple.
+* "./inst/workflow/spmd/3d_I/" for running a 3D_I exmaple.
+* "./inst/workflow/spmd/3d_noX/" for running a 3D_noX exmaple.
 

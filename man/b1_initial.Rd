@@ -71,6 +71,8 @@ print(PARAM.toy1$ETA)
 RRand(toy1$CLASS.gbd, id.toy1)
 
 \donttest{
+.rem <- function(){
+
   ### Test toy2.
   set.seed(1234)
   X.gbd <- toy2$X.gbd
@@ -81,6 +83,8 @@ RRand(toy1$CLASS.gbd, id.toy1)
   id.toy2 <- .MixfMRIEnv$CLASS.gbd
   print(PARAM.toy2$ETA)
   RRand(toy2$CLASS.gbd, id.toy2)
+
+}
 }
 }
 \keyword{programming}

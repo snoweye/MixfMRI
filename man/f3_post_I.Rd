@@ -95,6 +95,8 @@ library(EMCluster, quietly = TRUE)
 K <- 3
   
 \donttest{
+.rem <- function(){
+
   ### Fit toy1.
   set.seed(1234)
   X.gbd <- toy1$X.gbd
@@ -127,6 +129,8 @@ K <- 3
        main = "1st observation", xlab = "x", ylab = "y")
   plotBN(log.or[id,], cov.log.or[[id]])
   points(0, 0, col = 2)
+
+}
 }
 }
 \keyword{programming}

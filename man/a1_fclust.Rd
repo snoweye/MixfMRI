@@ -143,6 +143,8 @@ id.toy1 <- .MixfMRIEnv$CLASS.gbd
 print(RRand(toy1$CLASS.gbd, id.toy1))
 
 \donttest{
+.rem <- function(){
+
   ### Test toy2.
   X.gbd <- toy2$X.gbd[, -3]
   PV.gbd <- toy2$PV.gbd
@@ -150,6 +152,8 @@ print(RRand(toy1$CLASS.gbd, id.toy1))
   print(PARAM)
   id.toy2 <- .MixfMRIEnv$CLASS.gbd
   print(RRand(toy2$CLASS.gbd, id.toy2))
+
+}
 }
 }
 \keyword{programming}

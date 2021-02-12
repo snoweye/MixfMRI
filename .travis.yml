@@ -1,0 +1,28 @@
+language: R
+sudo: required
+warnings_are_errors: true
+
+env: 
+  global:
+    - CRAN: https://cran.rstudio.com
+    - _R_CHECK_FORCE_SUGGESTS_=FALSE
+
+before_install:
+  - sudo apt-get update -q
+  - Rscript -e "sessionInfo()"
+
+r_packages:
+  - RColorBrewer
+  - fftw
+  - MixSim
+  - EMCluster
+
+r_github_packages:
+
+r_check_args: --no-build-vignettes --no-manual
+
+notifications:
+  email:
+    on_success: no
+    on_failure: no
+
