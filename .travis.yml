@@ -9,6 +9,7 @@ env:
 
 before_install:
   - sudo apt-get update -q
+  - sudo apt-get install -qq libfftw3-dev
   - Rscript -e "sessionInfo()"
 
 r_packages:
