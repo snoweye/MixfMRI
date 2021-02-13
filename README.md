@@ -6,8 +6,15 @@
 * **Authors:** Wei-Chen Chen and Ranjan Maitra
 
 MixfMRI is an R package clustering fMRI data using parallel model-based
-clustering. The package mainly implements methods proposed in
-Chen and Maitra (2021), arXiv:2102.03639. ([pdf](https://arxiv.org/pdf/2102.03639))
+clustering. The package mplements methods in Chen and Maitra (2021),
+arXiv:2102.03639 ([pdf](https://arxiv.org/pdf/2102.03639)).
+The developed methods include 2D and 3D clustering analyses
+(for p-values with voxel locations) and
+segmentation analyses (for p-values alone) for fMRI data where p-values
+indicate significant level of activation responding to stimulate
+of interesting. The analyses are mainly identifying active
+voxel/signal associated with normal brain behaviors.
+
 
 ## Installation
 
