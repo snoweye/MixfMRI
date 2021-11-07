@@ -1,12 +1,12 @@
 Package: MixfMRI
-Version: 0.1-1
-Date: 2021-02-11
+Version: 0.1-2
+Date: 2021-11-06
 Title: Mixture fMRI Clustering Analysis
 Authors@R: c(person("Wei-Chen", "Chen", role = c("aut", "cre"), email =
         "wccsnow@gmail.com"),
-        person("Ranjan", "Maitra", role = "aut"),
+        person("Ranjan", "Maitra", role = "aut", email = "maitra@iastate.edu"),
         person("Dan", "Nettleton", role = "ctb"))
-Depends: R (>= 3.4.0)
+Depends: R (>= 4.0.0)
 Imports: MASS, Matrix, RColorBrewer, fftw, MixSim, EMCluster
 Enhances: pbdMPI (>= 0.3-4), AnalyzeFMRI, oro.nifti
 LazyLoad: yes
