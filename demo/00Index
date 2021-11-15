@@ -3,6 +3,7 @@ pval_2d_mag		MixfMRI	A 2D example.
 pval_2d_complex		MixfMRI	A 2D example.
 test_toy		MixfMRI	Analysis the toy datasets.
 test_noX		MixfMRI	An example of ignoring X inforamtion.
+test_pstats		MixfMRI An example of 3D p-value array.
 fclust3d		MixfMRI	fMRI clustering on 3D data.
 fclust2d		MixfMRI	fMRI clustering on 2D data.
 mpi_test_toy		MixfMRI	Analysis the toy datasets in parallel.
