@@ -55,7 +55,7 @@ lrt2 <- function(PV.gbd, CLASS.gbd, K, H0.mean = .FC.CT$LRT$H0.mean,
       }
 
       ### p-value.
-      p.value <- pchisq(lrt, 2, lower.tail = FALSE)
+      p.value <- pchisq(lrt, 1, lower.tail = FALSE)
       ret <- rbind(ret, c(i.k, H0.alpha, H0.beta, Ha.alpha, Ha.beta,
                           logL.0, logL.a, lrt, p.value))
     } else{

@@ -44,6 +44,11 @@
   \code{lrt.betaab} tests if alpha and beta of any two pairs of mixture
   (p-value) components were the same.
   The chi-square distribution with 2 degrees of freedom is used.
+
+  Procedure to adjust/select plausible p-values,
+  \code{proc = "1"} uses q-value \code{qvalue()},
+  \code{proc = "2"} uses \code{fdr.bh.p2()}, and
+  \code{proc = "weight"} uses a weighted version of \code{fdr.bh.p2()}.
 }
 \value{
   A matrix contains MLEs of parameters of Beta distribution under the null
