@@ -12,8 +12,9 @@ decompsigma.I <- function(full, sigma.ill = .FC.CT$CONTROL$sigma.ill){
 } # End of decompsigma.I().
 
 decompsigma.V <- function(full, sigma.ill = .FC.CT$CONTROL$sigma.ill){
-  DS <- try(chol(full))
+  DS <- try(chol(full), silent = TRUE)
   if(class(DS) == "try-error"){
+    .MixfMRIEnv$cat("Checks via chol() may have errors.\n", quiet = TRUE)
     DS.check <- FALSE
   } else{
     ds <- diag(DS)

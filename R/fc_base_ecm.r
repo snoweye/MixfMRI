@@ -65,7 +65,7 @@ ecm.step.gbd <- function(PARAM.org){
       time.start <- proc.time()
     }
 
-    PARAM.new <- try(ecm.onestep.gbd(PARAM.org))
+    PARAM.new <- try(ecm.onestep.gbd(PARAM.org), silent = TRUE)
     if(.MixfMRIEnv$any(class(PARAM.new) == "try-error")){
       .MixfMRIEnv$cat("Results of previous iterations are returned.\n",
                         quiet = TRUE)
