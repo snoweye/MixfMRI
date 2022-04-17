@@ -53,7 +53,7 @@ fclust <- function(X.gbd, PV.gbd, K = 2,
     N.CLASS <- get.N.CLASS(PARAM$K)
     if(any(N.CLASS < PARAM$min.N.CLASS)){
       if(stop.unstable){
-        stop("Initialization may be unstable.")
+        stop("Initialization may be unstable (N.CLASS < min.N.CLASS).")
       }
     }
 
@@ -62,7 +62,7 @@ fclust <- function(X.gbd, PV.gbd, K = 2,
       tmp.check <- lapply(PARAM$SIGMA, function(x){ x$U.check })
       if(!all(do.call("c", tmp.check))){
         if(stop.unstable){
-          stop("Initialization may be unstable.")
+          stop("Initialization may be unstable (SIGMA fails).")
         }
       }
     }
