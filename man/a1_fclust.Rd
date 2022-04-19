@@ -68,7 +68,7 @@
   distribution with \code{alpha < 1 < beta}.
 
   Multivariate Normal density:
-  \code{model.X = "I"} is for identity cov matrix of multivariate Normal
+  \code{model.X = "I"} is for diagonal cov matrix of multivariate Normal
   distribution, and \code{"V"} for unstructured cov matrix.
   \code{ignore.X = TRUE} is to ignore \code{X.gbd} and normal density,
   i.e. only Beta density is used.

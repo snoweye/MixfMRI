@@ -5,6 +5,7 @@ decompsigma.I <- function(full, sigma.ill = .FC.CT$CONTROL$sigma.ill){
   DS <- sqrt(full)
   DS.check <- TRUE
   if(min(DS) / max(DS) < sigma.ill){
+    .MixfMRIEnv$cat("Checks via min(DS)/max(DS) may have errors.\n", quiet = TRUE)
     DS.check <- FALSE
   }
 

@@ -3,7 +3,7 @@
 \alias{lmt.pv}
 \title{Likelihood Mixture Tests with Identity Cov Matrix or Only p-values}
 \description{
-  These functions test two mixture Gaussian fMRI models with identity
+  These functions test two mixture Gaussian fMRI models with diagonal
   covariance matrices and different numbers of clusters.
   These functions are similar to the \code{EMCluster::lmt(}), but is coded
   for fMRI models in \pkg{MixfMRI}.
