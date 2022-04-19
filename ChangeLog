@@ -1,5 +1,6 @@
 2022-04-12: v0.1-3
   * Update examples.
+  * Add silence = TRUE to try().
   * Update more error messages.
 
 2021-11-06: v0.1-2
