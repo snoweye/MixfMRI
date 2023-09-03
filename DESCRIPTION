@@ -1,6 +1,6 @@
 Package: MixfMRI
 Version: 0.1-3
-Date: 2022-04-12
+Date: 2023-09-03
 Title: Mixture fMRI Clustering Analysis
 Authors@R: c(person("Wei-Chen", "Chen", role = c("aut", "cre"), email =
         "wccsnow@gmail.com"),

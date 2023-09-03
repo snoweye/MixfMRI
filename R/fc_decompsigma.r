@@ -14,7 +14,7 @@ decompsigma.I <- function(full, sigma.ill = .FC.CT$CONTROL$sigma.ill){
 
 decompsigma.V <- function(full, sigma.ill = .FC.CT$CONTROL$sigma.ill){
   DS <- try(chol(full), silent = TRUE)
-  if(class(DS) == "try-error"){
+  if(inherits(DS, "try-error")){
     .MixfMRIEnv$cat("Checks via chol() may have errors.\n", quiet = TRUE)
     DS.check <- FALSE
   } else{

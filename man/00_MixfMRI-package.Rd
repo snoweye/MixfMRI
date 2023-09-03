@@ -13,13 +13,6 @@
   Workflows are also implemented utilizing high performance techniques.
 }
 \details{
-\tabular{ll}{
-  Package: \tab MixfMRI\cr
-  Type: \tab Package\cr
-  License: \tab GPL (>= 2)\cr
-  LazyLoad: \tab yes\cr
-}
-
   The main function of this package is \code{\link{fclust}()} that implements
   model-based clustering algorithm for fMRI signal data and provides
   unsupervised clustering results for the data. Several workflows implemented

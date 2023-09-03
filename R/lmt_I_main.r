@@ -4,7 +4,8 @@
 
 lmt.I <- function(fcobj.0, fcobj.a, X.gbd, PV.gbd, tau = 0.5,
     n.mc.E.delta = 1000, n.mc.E.chi2 = 1000, verbose = FALSE){
-  if(class(fcobj.0) != "fclust" || class(fcobj.a) != "fclust"){
+  if((!inherits(fcobj.0, "fclust")) ||
+     (!inherits(fcobj.a, "fclust"))){
     stop("fcobj.0 and fcobj.a should be both in \"fclust\" class.")
   }
   if(fcobj.0$param$K == fcobj.a$param$K){

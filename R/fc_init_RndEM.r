@@ -12,7 +12,7 @@ initial.RndEM.gbd <- function(PARAM){
     }
 
     PARAM <- try(initial.em.gbd(PARAM.org), silent = TRUE)
-    if(.MixfMRIEnv$any(class(PARAM) == "try-error")){
+    if(.MixfMRIEnv$any(inherits(PARAM, "try-error"))){
       .MixfMRIEnv$cat("The initial may be unstable. Skip to next initial.\n",
                         quiet = TRUE)
       if(.MixfMRIEnv$CONTROL$debug > 0){

@@ -1,7 +1,7 @@
 citHeader("To cite MixfMRI in a publication use:")
 
-citEntry(
-  entry = "Misc",
+bibentry(
+  bibtype = "Misc",
   title = "{MixfMRI}: {fMRI} Clustering Analysis",
   author = personList(as.person("Wei-Chen Chen"),
                       as.person("Ranjan Maitra")),
@@ -11,8 +11,8 @@ citEntry(
   key = "Chen2018MixfMRIpackage"
 )
 
-citEntry(
-  entry = "Manual",
+bibentry(
+  bibtype = "Manual",
   title = "A Quick Guide to the {MixfMRI} Package",
   author = personList(as.person("Wei-Chen Chen"),
                       as.person("Ranjan Maitra")),

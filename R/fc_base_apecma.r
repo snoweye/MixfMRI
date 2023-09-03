@@ -93,7 +93,7 @@ apecma.step.gbd <- function(PARAM.org){
     }
 
     PARAM.new <- try(apecma.onestep.gbd(PARAM.org), silent = TRUE)
-    if(.MixfMRIEnv$any(class(PARAM.new) == "try-error")){
+    if(.MixfMRIEnv$any(inherits(PARAM.new, "try-error"))){
       .MixfMRIEnv$cat("Results of previous iterations are returned.\n",
                         quiet =TRUE)
       .MixfMRIEnv$CHECK$convergence <- 99
