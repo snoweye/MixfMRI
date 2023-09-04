@@ -22,7 +22,7 @@ static const R_CallMethodDef callMethods[] = {
 
 static const R_CMethodDef CEntries[] = {
 	/* From AnalyzeFMRI. */
-	{"cluster_mass", (DL_FUNC) &cluster_mass, 7}
+	{"cluster_mass", (DL_FUNC) &cluster_mass, 7},
 
 	/* Finish R_CMethodDef. */
 	{NULL, NULL, 0}
@@ -30,6 +30,6 @@ static const R_CMethodDef CEntries[] = {
 /* End of the CMethods[]. */
 
 void R_init_MixfMRI(DllInfo *info){
-	R_registerRoutines(info, CMethods, callMethods, NULL, NULL);
+	R_registerRoutines(info, CEntries, callMethods, NULL, NULL);
 	R_useDynamicSymbols(info, TRUE);
 } /* End of R_init_MixfMRI(). */

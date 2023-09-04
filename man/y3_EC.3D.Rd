@@ -29,7 +29,9 @@ EC.3D(u, sigma, voxdim = c(1, 1, 1), num.vox, type = c("Normal", "t"), df = NULL
   where \eqn{H_0} is the null hypothesis that there is no signicant
   positive actiavtion/signal present in the field. Thus the Type I error
   of the test can be controlled through knowledge of the Expected Euler characteristic.
-  }
+
+  Note: This function is directly copied from "AnalyzeFMRI".
+}
 \value{The value of the expected Euler Characteristic.
 }
 \references{

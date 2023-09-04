@@ -17,6 +17,9 @@ Threshold.Bonferroni(p.val, n, type = c("Normal", "t", "F"), df1 = NULL, df2 = N
     degrees of freedom parameter for the F distribution.}
   \item{df2}{The second degrees of freedom parameter for the F distribution.}
 }
+\details{
+  Note: This function is directly copied from "AnalyzeFMRI".
+}
 \value{Returns the Bonferroni threshold.
 }
 \author{Pierre Lafaye De Micheaux and J. L. Marchini.}

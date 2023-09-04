@@ -19,7 +19,9 @@ Threshold.FDR(x, q, cV.type = 2, type = c("Normal", "t", "F"), df1 = NULL, df2 =
     degrees of freedom parameter for the F distribution.}
   \item{df2}{The second degrees of freedom parameter for the F distribution.}
 }
-
+\details{
+  Note: This function is directly copied from "AnalyzeFMRI".
+}
 \value{Returns the FDR threshold.
 }
 \references{Genovese et al. (2001) Thresholding of Statistical Maps in

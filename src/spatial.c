@@ -1,7 +1,11 @@
+/* Copy from "AnalyzeFMRI/src/spatial.c" since
+   "AnalyzeFMRI" is archived by CRAN. */
 
 #include <math.h>
 #include <R.h>
 
+typedef int Sint;
+#define SINT_MAX INT_MAX
 
 /* functions for calculating spatial clusters and their properties by thresholding a statistic map/image. A neighbouthood matrix nmat is used to determine connectivity. */
 

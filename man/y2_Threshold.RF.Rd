@@ -19,6 +19,8 @@ Threshold.RF(p.val, sigma, voxdim = c(1, 1, 1), num.vox,
 }
 \details{Calculates the threshold that produces an expected Euler
   characteristic equal to the required p-value.
+
+  Note: This function is directly copied from "AnalyzeFMRI".
 }
 \value{Returns the Random Field threshold.
 }

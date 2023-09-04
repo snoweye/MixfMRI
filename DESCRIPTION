@@ -32,3 +32,10 @@ BugReports: https://github.com/snoweye/MixfMRI/issues
 URL: https://github.com/snoweye/MixfMRI
 NeedsCompilation: yes
 Maintainer: Wei-Chen Chen <wccsnow@gmail.com>
+Packaged: 2023-09-04 20:11:01 UTC; snoweye
+Author: Wei-Chen Chen [aut, cre],
+  Ranjan Maitra [aut],
+  Dan Nettleton [aut, ctb],
+  Pierre Lafaye De Micheaux [aut, ctb] (Threshold functions from
+    AnalyzeFMRI),
+  Jonathan L Marchini [aut, ctb] (Threshold functions from AnalyzeFMRI)

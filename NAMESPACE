@@ -55,7 +55,8 @@ export(
   "Threshold.Bonferroni",
   "Threshold.RF",
   "EC.3D",
-  "Threshold.FDR"
+  "Threshold.FDR",
+  "cluster.threshold"
 )
 
 S3method(print, fclust)
