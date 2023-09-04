@@ -2,7 +2,8 @@ useDynLib(MixfMRI)
 
 importFrom("stats", "rmultinom", "rbeta", "dbeta", "dnorm", "qnorm", "optim",
                     "runif", "rnorm", "pnorm", "rbinom", "constrOptim",
-                    "pchisq", "rexp", "var", "cor", "median", "optimize")
+                    "pchisq", "rexp", "var", "cor", "median", "optimize",
+                    "pf", "pt", "qf", "qt")
 importFrom("grDevices", "colorRampPalette")
 importFrom("graphics", "axis", "image")
 importFrom("MASS", "ginv", "mvrnorm")
