@@ -27,7 +27,7 @@ indep.logL.I <- function(PARAM){
     .MixfMRIEnv$cat("\n", sep = "", quiet = TRUE)
   }
 
-  ret <- sum.gbd(log(ret[is.finite(ret)]))
+  ret <- sum_gbd(log(ret[is.finite(ret)]))
   ret
 } # End of indep.logL.I().
 
@@ -55,7 +55,7 @@ indep.logL.V <- function(PARAM){
     .MixfMRIEnv$cat("\n", sep = "", quiet = TRUE)
   }
 
-  ret <- sum.gbd(log(ret[is.finite(ret)]))
+  ret <- sum_gbd(log(ret[is.finite(ret)]))
   ret
 } # End of indep.logL.V().
 

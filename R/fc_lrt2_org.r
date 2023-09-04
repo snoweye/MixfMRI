@@ -14,19 +14,19 @@ lrt2.org <- function(PV.gbd, CLASS.gbd, K, H0.mean = 0.05,
 
   ### For optim() and H0.
   fn.H0 <- function(theta, x.gbd){
-    -sum.gbd(dbeta(x.gbd, beta.scale * theta[1], theta[1], log = TRUE))
+    -sum_gbd(dbeta(x.gbd, beta.scale * theta[1], theta[1], log = TRUE))
   }
 
   ### For constrOptim() and Ha.
   fn.Ha <- function(theta, x.gbd){
-    -sum.gbd(dbeta(x.gbd, theta[1], theta[2], log = TRUE))
+    -sum_gbd(dbeta(x.gbd, theta[1], theta[2], log = TRUE))
   }
   ui.Ha <- rbind(c(1, 0), c(H0.mean - 1, H0.mean))
   ci.Ha <- c(0, 0)
 
   ret <- NULL
   for(i.k in 1:K){
-    N.class.gbd <- sum.gbd(CLASS.gbd == i.k)
+    N.class.gbd <- sum_gbd(CLASS.gbd == i.k)
 
     if(N.class.gbd > 0){    # in case of empty cluster.
       tmp.gbd <- PV.gbd[CLASS.gbd == i.k]

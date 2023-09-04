@@ -14,13 +14,13 @@ rexp.bcast <- function(n, rate = 1){
   ret
 } # End of rexp.bcast().
 
-length.gbd <- function(x.gbd){
+length_gbd <- function(x.gbd){
   ret <- as.integer(length(x.gbd))
   if(.MixfMRIEnv$MPI.gbd){
     ret <- pbdMPI::spmd.allreduce.integer(ret, integer(1))
   }
   ret
-} # End of length.gbd().
+} # End of length_gbd().
 
 nrow.gbd <- function(x.gbd){
   ret <- as.integer(nrow(x.gbd))
@@ -30,15 +30,15 @@ nrow.gbd <- function(x.gbd){
   ret
 } # End of nrow.gbd().
 
-sum.gbd <- function(x.gbd){
+sum_gbd <- function(x.gbd){
   ret <- as.double(sum(x.gbd))
   if(.MixfMRIEnv$MPI.gbd){
     ret <- pbdMPI::spmd.allreduce.double(ret, double(1))
   }
   ret
-} # End of sum.gbd().
+} # End of sum_gbd().
 
-mean.gbd <- function(x.gbd){
+mean_gbd <- function(x.gbd){
   if(.MixfMRIEnv$MPI.gbd){
     n.gbd <- length(x.gbd) 
     n <- pbdMPI::spmd.allreduce.integer(n.gbd, integer(1))
@@ -48,7 +48,7 @@ mean.gbd <- function(x.gbd){
     ret <- as.double(mean(x.gbd))
   }
   ret
-} # End of mean.gbd().
+} # End of mean_gbd().
 
 var.gbd.I <- function(X.gbd){
   p.X <- ncol(X.gbd)

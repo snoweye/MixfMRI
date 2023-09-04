@@ -22,10 +22,10 @@ initial.BETA <- function(CLASS.gbd, K){
   ### For the rest cluster.
   for(i.k in 2:K){
     tmp <- .MixfMRIEnv$PV.gbd[CLASS.gbd == i.k]
-    tmp.M <- c(sum.gbd(tmp), sum.gbd(tmp^2))
+    tmp.M <- c(sum_gbd(tmp), sum_gbd(tmp^2))
 
     ### First two moments, M1 and M2.
-    tmp.N <- length.gbd(tmp)
+    tmp.N <- length_gbd(tmp)
     tmp.M <- tmp.M / tmp.N
 
     ### Get alpha and beta.
@@ -70,7 +70,7 @@ initial.SIGMA.I <- function(MU, CLASS.gbd, K){
 
   for(i.k in 1:K){  
     tmp.id <- which(CLASS.gbd == i.k)
-    tmp.N <- length.gbd(tmp.id)
+    tmp.N <- length_gbd(tmp.id)
     B <- W.plus.y(.MixfMRIEnv$X.gbd[tmp.id,], -MU[, i.k],
                   length(tmp.id), p.X) /
          sqrt(tmp.N - 1)
@@ -89,7 +89,7 @@ initial.SIGMA.V <- function(MU, CLASS.gbd, K){
 
   for(i.k in 1:K){  
     tmp.id <- which(CLASS.gbd == i.k)
-    tmp.N <- length.gbd(tmp.id)
+    tmp.N <- length_gbd(tmp.id)
     B <- W.plus.y(.MixfMRIEnv$X.gbd[tmp.id,], -MU[, i.k],
                   length(tmp.id), p.X) /
          sqrt(tmp.N - 1)

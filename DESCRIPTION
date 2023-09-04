@@ -13,7 +13,7 @@ LazyLoad: yes
 LazyData: yes
 Description: Utilizing model-based clustering (unsupervised)
         for functional magnetic resonance imaging (fMRI) data.
-        The developed methods (Chen and Maitra (2021) <arXiv:2102.03639>)
+        The developed methods (Chen and Maitra (2023) <doi:10.1002/hbm.26425>)
         include 2D and 3D clustering analyses
         (for p-values with voxel locations) and
         segmentation analyses (for p-values alone) for fMRI data where p-values

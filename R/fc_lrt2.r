@@ -15,21 +15,21 @@ lrt2 <- function(PV.gbd, CLASS.gbd, K, H0.mean = .FC.CT$LRT$H0.mean,
 
   ### For optim() and H0.
   fn.H0 <- function(theta, x.gbd){
-    -sum.gbd(dbeta(x.gbd, theta[1], theta[2], log = TRUE))
+    -sum_gbd(dbeta(x.gbd, theta[1], theta[2], log = TRUE))
   }
   ui.H0 <- rbind(c(1, 0), c(1 - H0.mean, -H0.mean), c(0, 1))
   ci.H0 <- c(0, 0, 0)
 
   ### For constrOptim() and Ha.
   fn.Ha <- function(theta, x.gbd){
-    -sum.gbd(dbeta(x.gbd, theta[1], theta[2], log = TRUE))
+    -sum_gbd(dbeta(x.gbd, theta[1], theta[2], log = TRUE))
   }
   ui.Ha <- rbind(c(1, 0), c(0, 1))
   ci.Ha <- c(0, 0)
 
   ret <- NULL
   for(i.k in 1:K){
-    N.class.gbd <- sum.gbd(CLASS.gbd == i.k)
+    N.class.gbd <- sum_gbd(CLASS.gbd == i.k)
 
     if(N.class.gbd > 0){    # in case of empty cluster.
       tmp.gbd <- PV.gbd[CLASS.gbd == i.k]
@@ -71,7 +71,7 @@ lrt2 <- function(PV.gbd, CLASS.gbd, K, H0.mean = .FC.CT$LRT$H0.mean,
   } else if(proc[1] == "weight"){
     w.size <- rep(0, K)
     for(i.k in 1:K){
-      w.size[i.k] <- sum.gbd(CLASS.gbd == i.k)
+      w.size[i.k] <- sum_gbd(CLASS.gbd == i.k)
     }
     w.size <- w.size / sum(w.size) * K 
     qvalue.w <- fdr.bh.p2(ret[, ncol(ret)], w = w.size, q = 0.05)$adjp

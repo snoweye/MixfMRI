@@ -82,14 +82,14 @@ m.step.gbd <- function(PARAM){
 
 ### log likelihood.
 logL.step.gbd <- function(){
-  sum.gbd(.MixfMRIEnv$W.gbd.rowSums)
+  sum_gbd(.MixfMRIEnv$W.gbd.rowSums)
 } # End of logL.step.gbd().
 
 ### entropy.
 entropy.step.gbd <- function(){
   tmp.gbd <- .MixfMRIEnv$Z.gbd * log(.MixfMRIEnv$Z.gbd)
   tmp.gbd[! is.finite(tmp.gbd)] <- 0
-  -sum.gbd(tmp.gbd)
+  -sum_gbd(tmp.gbd)
 } # End of entropy.step.gbd().
 
 
@@ -167,7 +167,7 @@ em.step.gbd <- function(PARAM.org){
 
       .MixfMRIEnv$SAVE.param <- c(.MixfMRIEnv$SAVE.param, PARAM.new)
       CLASS.iter.new <- unlist(apply(.MixfMRIEnv$Z.gbd, 1, which.max))
-      tmp <- sum.gbd(CLASS.iter.new != .MixfMRIEnv$CLASS.iter.org)
+      tmp <- sum_gbd(CLASS.iter.new != .MixfMRIEnv$CLASS.iter.org)
 
       tmp.all <- c(tmp / PARAM.new$N, PARAM.new$logL,
                    PARAM.new$logL - PARAM.org$logL,

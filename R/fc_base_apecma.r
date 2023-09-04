@@ -113,7 +113,7 @@ apecma.step.gbd <- function(PARAM.org){
 
       .MixfMRIEnv$SAVE.param <- c(.MixfMRIEnv$SAVE.param, PARAM.new)
       CLASS.iter.new <- unlist(apply(.MixfMRIEnv$Z.gbd, 1, which.max))
-      tmp <- sum.gbd(CLASS.iter.new != .MixfMRIEnv$CLASS.iter.org)
+      tmp <- sum_gbd(CLASS.iter.new != .MixfMRIEnv$CLASS.iter.org)
 
       tmp.all <- c(tmp / PARAM.new$N, PARAM.new$logL,
                    PARAM.new$logL - PARAM.org$logL,

@@ -43,20 +43,20 @@ mle.beta.constr <- function(PARAM, i.k, method = .FC.CT$optim.method[1]){
 beta.constrOptim.f <- function(x, i.k){
   tmp <- dbeta(.MixfMRIEnv$PV.gbd, x[1], x[2], log = TRUE)
 
-  ret <- -sum.gbd(tmp * .MixfMRIEnv$Z.gbd[, i.k])
+  ret <- -sum_gbd(tmp * .MixfMRIEnv$Z.gbd[, i.k])
   ret
 } # End of beta.constrOptim.f().
 
 # d/dx B(x, y) = B(x, y) * (Psi(x) - Psi(x + y))
 # where Psi(.) is a digamma function.
 beta.constrOptim.grad <- function(x, i.k){
-  z <- sum.gbd(.MixfMRIEnv$Z.gbd[, i.k])
+  z <- sum_gbd(.MixfMRIEnv$Z.gbd[, i.k])
   A <- digamma(x[1]) * z
   B <- digamma(x[2]) * z
   AB <- digamma(x[1] + x[2]) * z
 
-  tmp.PV.Z <- sum.gbd(.MixfMRIEnv$log.PV.gbd * .MixfMRIEnv$Z.gbd[, i.k])
-  tmp.1.PV.Z <- sum.gbd(.MixfMRIEnv$log.1.PV.gbd * .MixfMRIEnv$Z.gbd[, i.k])
+  tmp.PV.Z <- sum_gbd(.MixfMRIEnv$log.PV.gbd * .MixfMRIEnv$Z.gbd[, i.k])
+  tmp.1.PV.Z <- sum_gbd(.MixfMRIEnv$log.1.PV.gbd * .MixfMRIEnv$Z.gbd[, i.k])
 
   ret <- -c(AB - A + tmp.PV.Z, AB - B + tmp.1.PV.Z)
   ret

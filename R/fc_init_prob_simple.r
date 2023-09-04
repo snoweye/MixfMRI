@@ -14,7 +14,7 @@ initial.em.gbd.prob.simple <- function(PARAM){
 
   ### For the rests.
   id.PV.gbd <- which(.MixfMRIEnv$PV.gbd < PARAM$max.PV)
-  if(length.gbd(id.PV.gbd) < PARAM$min.N.CLASS * (K - 1)){
+  if(length_gbd(id.PV.gbd) < PARAM$min.N.CLASS * (K - 1)){
     ### Avoid too tiny subset or too large K.
     stop("K may be too large.")
   }
