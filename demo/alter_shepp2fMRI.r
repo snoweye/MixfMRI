@@ -1,5 +1,5 @@
 library(MixfMRI, quietly = TRUE)
-library(AnalyzeFMRI, quietly = TRUE)
+# library(AnalyzeFMRI, quietly = TRUE)
 set.seed(1234)
 phantom <- shepp2fMRI
 da.all <- gendataset(phantom = phantom, overlap = 0.01)

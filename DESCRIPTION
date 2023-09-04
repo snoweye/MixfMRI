@@ -5,10 +5,14 @@ Title: Mixture fMRI Clustering Analysis
 Authors@R: c(person("Wei-Chen", "Chen", role = c("aut", "cre"), email =
         "wccsnow@gmail.com"),
         person("Ranjan", "Maitra", role = "aut", email = "maitra@iastate.edu"),
-        person("Dan", "Nettleton", role = "ctb"))
+        person("Dan", "Nettleton", role = c("aut", "ctb")),
+        person("Pierre", "Lafaye De Micheaux", role = c("aut", "ctb"),
+	       comment = "Threshold functions from AnalyzeFMRI"),
+        person("Jonathan L", "Marchini", role = c("aut", "ctb"),
+               comment = "Threshold functions from AnalyzeFMRI"))
 Depends: R (>= 4.0.0)
 Imports: MASS, Matrix, RColorBrewer, fftw, MixSim, EMCluster
-Enhances: pbdMPI (>= 0.3-4), AnalyzeFMRI, oro.nifti
+Enhances: pbdMPI (>= 0.3-4), oro.nifti
 LazyLoad: yes
 LazyData: yes
 Description: Utilizing model-based clustering (unsupervised)
