@@ -87,20 +87,20 @@ table(id.class.logit)
 .rem <- function(){
 
   ### Real data
-  library(AnalyzeFMRI, quietly = TRUE)
-  library(oro.nifti, quietly = TRUE)
+  # library(AnalyzeFMRI, quietly = TRUE)
+  # library(oro.nifti, quietly = TRUE)
 
-  fn <- "pb02_volreg_tlrc.nii"
-  da <- readNIfTI(fn)
-  da.ts <- da@.Data
+  # fn <- "pb02_volreg_tlrc.nii"
+  # da <- readNIfTI(fn)
+  # da.ts <- da@.Data
 
-  fn <- "mask_anat.nii"
-  da <- readNIfTI(fn)
-  da.m <- da@.Data
+  # fn <- "mask_anat.nii"
+  # da <- readNIfTI(fn)
+  # da.m <- da@.Data
 
-  id.class <- suppressWarnings(cba.cor(da.ts, da.m))
-  dim(id.class) <- dim(da.m)
-  length(table(id.class))
+  # id.class <- suppressWarnings(cba.cor(da.ts, da.m))
+  # dim(id.class) <- dim(da.m)
+  # length(table(id.class))
 
 }
 }
