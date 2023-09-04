@@ -4,6 +4,7 @@
   * Change class() to inherits().
   * Replace "mean.gbd", "length.gbd", and "sum.gbd" by "mean_gbd",
     "length_gbd", and "sum_gbd" to avoid notes of S3 mismatches.
+  * Add functions from "AnalyzeFMRI".
 
 2022-04-12: v0.1-3
   * Update examples.
