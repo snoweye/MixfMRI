@@ -24,7 +24,8 @@
   \dQuote{A practical model-based segmentation approach for improved
           activation detection in single-subject functional magnetic
           resonance imaging studies},
-  \emph{doi:10.1002/hbm.26425}.
+  \emph{Human Brain Mapping}, \bold{44}(16), 5309--5335.
+  (\emph{doi:10.1002/hbm.26425})
 }
 \author{
   Wei-Chen Chen and Ranjan Maitra.

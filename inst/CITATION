@@ -8,8 +8,10 @@ bibentry(
   year = "2023",
   journal = "Human Brain Mapping",
   url = "https://doi.org/10.1002/hbm.26425",
-  pages = "1-27",
-  textVersion = "Chen, W.-C. and Maitra, R. (2023). A practical model-based segmentation approach for improved activation detection in single-subject functional magnetic resonance imaging studies. Human Brain Mapping, 1-27",
+  volume = "44",
+  number = "16",
+  pages = "5309--5335",
+  textVersion = "Chen, W.-C. and Maitra, R. (2023). A practical model-based segmentation approach for improved activation detection in single-subject functional magnetic resonance imaging studies. Human Brain Mapping, 44(16), 5309--5335",
   key = "ChenMaitra2023HBM"
 )
 
