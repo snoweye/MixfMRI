@@ -130,13 +130,13 @@ min.gbd <- function(..., na.rm = FALSE){
   ret
 } # End of min.gbd().
 
-crossprod.gbd <- function(x, y = NULL){
+crossprod.gbd <- function(x, y = NULL, ...){
   nrow <- ncol(x)
   ncol <- nrow
   if(!is.null(y)){
     ncol <- ncol(y)
   }
-  ret <- as.double(crossprod(x, y = y))
+  ret <- as.double(crossprod(x, y = y, ...))
   if(.MixfMRIEnv$MPI.gbd){
     ret <- pbdMPI::spmd.allreduce.double(ret, double(length(ret)), op = "sum")
   }

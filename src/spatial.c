@@ -37,8 +37,8 @@ float *thresh_value, Sint *ans, float *ans1){
  y= *(array_dim+1);
  z= *(array_dim+2);
 
- vox_mat=Calloc(3,Sint);
- vox_mat_vals=Calloc(1,float);
+ vox_mat=calloc(3,sizeof(Sint));
+ vox_mat_vals=calloc(1,sizeof(float));
 
 
  for(i=0;i<x;i++){
@@ -47,8 +47,8 @@ float *thresh_value, Sint *ans, float *ans1){
 	
 	if(*(array+i*y*z+j*z+k)>*thresh_value){
 
-	  vox_mat=Realloc(vox_mat,3*(num+1),Sint);
-	  vox_mat_vals=Realloc(vox_mat_vals,(num+1),float);
+	  vox_mat=realloc(vox_mat,3*(num+1)*sizeof(Sint));
+	  vox_mat_vals=realloc(vox_mat_vals,(num+1)*sizeof(float));
 	  
 	  *(vox_mat+num*3)=(Sint) i+1;
 	  *(vox_mat+num*3+1)=(Sint) j+1;
@@ -62,7 +62,7 @@ float *thresh_value, Sint *ans, float *ans1){
  }
  
     if(num>0){
-	vox_rel=Calloc(num*num,Sint);
+	vox_rel=calloc(num*num,sizeof(Sint));
 	
 	for(i=0;i<(num-1);i++){
 	  for(j=i+1;j<num;j++){
@@ -98,7 +98,7 @@ float *thresh_value, Sint *ans, float *ans1){
 		for(i=0;i<num*(n-row);i++) *(vox_rel+(row-1)*num+i)=*(vox_rel+(row)*num+i);
 	  
 		n-=1;
-		vox_rel=Realloc(vox_rel,num*n,Sint);
+		vox_rel=realloc(vox_rel,num*n*sizeof(Sint));
 		comp=0;
 	      }
 	    else { comp-=1;}
@@ -155,11 +155,11 @@ float *thresh_value, Sint *ans, float *ans1){
 	
 
        
-	Free(vox_rel);
+	free(vox_rel);
     } else { *ans =0;}
 
-	Free(vox_mat);
-	Free(vox_mat_vals);
+	free(vox_mat);
+	free(vox_mat_vals);
 } 
 
 
@@ -170,7 +170,7 @@ void twovoxtyp(Sint *voxel1, Sint *voxel2, Sint *nmat, Sint *nmat_dim, Sint *ans
 
   int i;
   Sint *dif; 
-  dif=Calloc(3,Sint); 
+  dif=calloc(3,sizeof(Sint)); 
  
   *ans=0;
  
@@ -186,7 +186,7 @@ void twovoxtyp(Sint *voxel1, Sint *voxel2, Sint *nmat, Sint *nmat_dim, Sint *ans
  
   else i+=1; 
   while (i<*nmat_dim); 
-  Free(dif); 
+  free(dif); 
 } 
 
 void covariance_est(double *array, int *array_dim, int *mask, int *nmat, int *nmat_dim, double *ans){

@@ -1,3 +1,7 @@
+2024-10-16: v0.1-4
+  * Fix an Rd file.
+  * Fix strict issues (calloc, realloc, free).
+
 2023-09-03: v0.1-3
   * Remove meta data from man.
   * Modify CITATION.

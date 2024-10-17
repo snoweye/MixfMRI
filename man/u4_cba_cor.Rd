@@ -32,7 +32,8 @@
 
   \code{fun.sim(a, B)} is a function return similarity between a location
   \code{a} and N neighboring locations \code{B} where \code{a} is of dimension
-  \code{t * 1} and \code{B} is of dimension{t * N}. Ideally, \code{fun.sim}()
+  \code{t * 1} and \code{B} is of dimension \code{t * N}.
+  Ideally, \code{fun.sim}()
   should return values of similarity which take values
   between 0 and 1 where 0 means totally different and
   1 means completely identical of two spatial locations.
